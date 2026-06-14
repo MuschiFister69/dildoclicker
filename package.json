@@ -1,0 +1,35 @@
+{
+  "name": "dildo-clicker",
+  "version": "2.0.0",
+  "description": "A clicker game featuring a Bad Dragon inspired dildo",
+  "main": "main.js",
+  "scripts": {
+    "start": "npx.cmd electron .",
+    "build": "npx.cmd electron-builder --win portable",
+    "build-dir": "npx.cmd electron-builder --win dir"
+  },
+  "build": {
+    "appId": "com.dildoclicker.app",
+    "productName": "Dildo Clicker",
+    "directories": {
+      "output": "dist2"
+    },
+    "files": [
+      "index.html",
+      "main.js",
+      "package.json"
+    ],
+    "win": {
+      "sign": null
+    },
+    "portable": {
+      "requestExecutionLevel": "user"
+    }
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.0.1",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0",
+    "electron-packager": "^17.1.2"
+  }
+}
